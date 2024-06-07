@@ -1,0 +1,87 @@
+Write a program to find whether a given character is an uppercase, lowercase, number or symbol. If it is an alphabet find whether it is an Uppercase or Lowercase. If it is a number display Number else display Symbol.
+
+Input Format
+
+Input consists of 1 character
+
+Constraints
+
+1<=ch<=65535
+
+Output Format
+
+Print Upper if upper case letter Print Lower if lower case letter Print Number if number Print Symbol if symbol
+
+Sample Input 0
+
+A
+Sample Output 0
+
+Upper
+Sample Input 1
+
+d
+Sample Output 1
+
+Lower
+Sample Input 2
+
+8
+Sample Output 2
+
+Number
+Sample Input 3
+
+$
+Sample Output 3
+
+Symbol
+Submissions: 509
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+Symbol
+1
+#include <stdio.h>
+2
+#include <string.h>
+3
+#include <math.h>
+4
+#include <stdlib.h>
+5
+​
+6
+int main() {
+7
+​
+8
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+9
+         char c;
+10
+         scanf("%c",&c);
+11
+         if(c>='A' && c<='Z')
+12
+             printf("Upper");
+13
+         else if(c>='a' && c<='z')
+14
+            printf("Lower");
+15
+         else if(c>='0'&& c<='9')
+16
+           printf("Number");
+17
+         else
+18
+          printf("Symbol");
+19
+    return 0;
+20
+}
