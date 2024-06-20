@@ -1,0 +1,136 @@
+Write a program to find whether the two arrays are the same or not. Two arrays are said to be the same if the elements of both the arrays is the same and the size of arrays is the same.
+
+Input Format
+
+First number represents the size of first array Second number represents the size of second array Read elements of the first array side based on First number Read elements of the second array side based on Second number
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+If two arrays are same, display "Same" else display "Not Same"
+
+Sample Input 0
+
+3
+3
+1 2 3
+1 2 3
+Sample Output 0
+
+Same
+Sample Input 1
+
+3
+3
+1 2 1
+2 3 6
+Sample Output 1
+
+Not Same
+Sample Input 2
+
+3
+4
+1 2 3
+1 2 3 4
+Sample Output 2
+
+Not Same
+Sample Input 3
+
+5
+5
+22 11 33 44 55
+22 11 33 55 44
+Sample Output 3
+
+Not Same
+Submissions: 534
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+#include <stdio.h>
+2
+#include <string.h>
+3
+#include <math.h>
+4
+#include <stdlib.h>
+5
+​
+6
+int main() {
+7
+​
+8
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+9
+    int n1,n2;
+10
+    scanf("%d%d",&n1,&n2);
+11
+    int a[n1],b[n2],i;
+12
+    for(i=0;i<n1;i++)
+13
+    { for(i=0;i<n1;i++)
+14
+        scanf("%d",&a[i]);
+15
+    }
+16
+    for(i=0;i<n2;i++)
+17
+    {
+18
+        scanf("%d",&b[i]);
+19
+    }
+20
+    if(n1!=n2)
+21
+    {
+22
+        printf("Not Same");
+23
+    }
+24
+    else
+25
+    {
+26
+      for(i=0;i<n1;i++)   
+27
+      {
+28
+          if(a[i]!=b[i])
+29
+          {
+30
+             printf("Not Same");
+31
+             break;
+32
+          }
+33
+      }
+34
+    if(i==n1)
+35
+        printf("Same");
+36
+    }
+37
+    return 0;
+38
+}
+39
+​
