@@ -1,0 +1,94 @@
+An e-commerce company plans to give their customers a discount for the New Years holiday. The discount will be calculated on the basis of the bill amount of the order placed. The discount amount is the sum of all the odd digits on the customer’s total bill amount. If no odd digit is present in the bill amount, then the discount will be zero. Write an algorithm to find a discount for the given total bill amount.
+
+Input Format
+
+The input consists of an integer bill amount, representing the customer’s total bill amount.
+
+Constraints
+
+0
+
+Output Format
+
+Print an integer representing the discount for the given total bill amount.
+
+Sample Input 0
+
+2514795
+Sample Output 0
+
+27
+Sample Input 1
+
+234
+Sample Output 1
+
+3
+Sample Input 2
+
+246824
+Sample Output 2
+
+0
+Submissions: 162
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+#include <stdio.h>
+2
+#include <string.h>
+3
+#include <math.h>
+4
+#include <stdlib.h>
+5
+​
+6
+    int discount(long long int b) 
+7
+    { 
+8
+        int d = 0; 
+9
+        while(b > 0) 
+10
+        { 
+11
+            int digit = b % 10; 
+12
+            if(digit % 2 != 0) 
+13
+            { 
+14
+                d += digit; 
+15
+            } 
+16
+            b /= 10; 
+17
+        } 
+18
+        return d; 
+19
+    } 
+20
+    int main() 
+21
+    { 
+22
+        long long int b; 
+23
+        scanf("%lld", &b); 
+24
+        int d = discount(b); 
+25
+        printf("%d\n", d);
+26
+        return 0;
+27
+    }
